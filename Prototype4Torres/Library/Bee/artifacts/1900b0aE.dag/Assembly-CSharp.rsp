@@ -361,6 +361,8 @@
 "Assets/Challenge 4/Scripts/SpawnManagerX.cs"
 "Assets/Course Library/Scripts/Enemy.cs"
 "Assets/Course Library/Scripts/PlayerController.cs"
+"Assets/Course Library/Scripts/PowerUp.cs"
+"Assets/Course Library/Scripts/RocketBehaviour.cs"
 "Assets/Course Library/Scripts/RotateCamera.cs"
 "Assets/Course Library/Scripts/SpawnManager.cs"
 -langversion:9.0
