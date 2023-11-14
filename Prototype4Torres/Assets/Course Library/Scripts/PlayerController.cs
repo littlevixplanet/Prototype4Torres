@@ -42,6 +42,28 @@ public class PlayerController : MonoBehaviour
             powerupIndicator.gameObject.SetActive(true);
         }
     }
+    IEnumerator Smash()
+    {
+        var enemies = FindObjectsOfType<Enemy>();
+        floorY = transform.position.y;
+        float jumpTime = Time.time + hangTime;
+        while(Time.time < jumpTime)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, smashSpeed);
+            yield return null;
+        }
+        while(transform.position.y > floorY)
+        {
+            rb.velocity = new Vector2 (rb.velocity.x, -smashSpeed * 2);
+            yield return null;
+        }
+        for (int i = 0; i < enemies.Length;  i++)
+        {
+            if (enemies[i] != null)
+                enemies[i].GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius, 0.0f, ForceMode.Impulse);
+        }
+        smashing = false;
+    }
     IEnumerator PowerupCountdownRoutine()
     {
         yield return new WaitForSeconds(7);
@@ -76,6 +98,11 @@ public class PlayerController : MonoBehaviour
         if (currentPowerUp == PowerUpType.Rockets && Input.GetKeyDown(KeyCode.F)) 
         { 
             LaunchRockets(); 
+        }
+        if (currentPowerUp == PowerUpType.Smash && Input.GetKeyDown(KeyCode.Space) && !smashing)
+        {
+            smashing = true;
+            StartCoroutine(Smash());
         }
     }
 }

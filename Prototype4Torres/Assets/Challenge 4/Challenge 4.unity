@@ -400,7 +400,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 8932280921958007952, guid: 47045ccb8f3944b9b8a55f6b07f0aefc, type: 3}
   powerupPrefab: {fileID: 4446131693967519089, guid: c5497424856514b2ba61b78375567988, type: 3}
   enemyCount: 0
-  waveCount: 1
+  waveCount: 0
   player: {fileID: 583048338}
 --- !u!1 &583048338
 GameObject:

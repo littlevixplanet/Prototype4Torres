@@ -651,10 +651,10 @@ MonoBehaviour:
   rb: {fileID: 1758269955}
   currentPowerUp: 0
   rocketPrefab: {fileID: 1886363836708823785, guid: be544d2910ba65b43a2c3367b26c9b7d, type: 3}
-  hangTime: 0
-  smashSpeed: 0
-  explosionForce: 0
-  explosionRadius: 0
+  hangTime: 0.4
+  smashSpeed: 20
+  explosionForce: 20
+  explosionRadius: 20
 --- !u!54 &1758269955
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -808,8 +808,14 @@ MonoBehaviour:
   powerupPrefab:
   - {fileID: 7354610549441072393, guid: 4c89145a11b147a449090de154ed7718, type: 3}
   - {fileID: 7354610549441072393, guid: 4edd49dc984064148965422f0737d225, type: 3}
+  - {fileID: 7354610549441072393, guid: d3580242ca4049447850109bfa934de6, type: 3}
   waveNumber: 1
   enemyCount: 0
+  bossPrefab: {fileID: 166356919747639144, guid: 07e8d1811bbb5da46a1e81ab6e738d7e, type: 3}
+  miniEnemyPrefabs:
+  - {fileID: 2564310462122122639, guid: e7509b1e260e9a74f800caadefb77116, type: 3}
+  - {fileID: 6187073341462740134, guid: da7067fc027c3874ab5615db9644e045, type: 3}
+  bossRound: 5
 --- !u!4 &2062173358
 Transform:
   m_ObjectHideFlags: 0
